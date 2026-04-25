@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lista de compras</title>
+
+    <link rel="stylesheet" href="inde.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <header>
+        <a href="#"><img src="/assets/icons/link button.svg" alt="voltar a homepage"></a>
+        <h1>Compras da semana</h1>
+    </header>
+    <main>
+        <div id="adicionar tarefas">
+            <input type="text" id="nova-tarefa" placeholder="adicione um novo item">
+            <button type="submit">adicionar item</button>
+        </div>
+        <ul id="lista-de-compras">
+            <li>
+                <input type="checkbox"> <span>Pão de forma</span> <span><img src="/assets/icons/Frame-3.svg" alt="deletar tarefa"></span>
+            </li>
+             <li>
+                <input type="checkbox"> <span>café preto</span> <span><img src="/assets/icons/Frame-3.svg" alt="deletar tarefa"></span>
+            </li>
+        </ul>
+    </main>
+    <footer>
+        <div id="alert" style="background-color: red;">
+            <img src="/assets/icons/warning-circle-filled.svg" alt="">
+            <span>O item foi removido da lista</span>
+            <img src="/assets/icons/delete-small.svg">
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
