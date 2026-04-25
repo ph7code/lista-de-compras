@@ -11,26 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="#"><img src="/assets/icons/link button.svg" alt="voltar a homepage"></a>
-        <h1>Compras da semana</h1>
+    <header class="container">
+        <div class="desktop-only">
+            <img src="/assets/icons/logo.svg" alt="logo">
+        </div>
+        <div>
+            <a href="#"><img src="/assets/icons/link button.svg" alt="voltar a homepage"></a>
+            <h1>Compras da semana</h1>
+        </div>
     </header>
-    <main>
-        <div id="adicionar tarefas">
-            <input type="text" id="nova-tarefa" placeholder="adicione um novo item">
-            <button type="submit">adicionar item</button>
+    <main class="container">
+        <div id="adicionar-tarefas">
+            <input type="text" id="nova-tarefa" placeholder="Adicione um novo item">
+            <button type="submit" id="btn-adicionar">Adicionar item</button>
         </div>
         <ul id="lista-de-compras">
-            <li>
-                <input type="checkbox"> <span>Pão de forma</span> <span><img src="/assets/icons/Frame-3.svg" alt="deletar tarefa"></span>
+            <li id="tarefa">
+                <input type="checkbox"> <span>Pão de forma</span> <img src="/assets/icons/Frame.svg" alt="deletar tarefa">
             </li>
-             <li>
-                <input type="checkbox"> <span>café preto</span> <span><img src="/assets/icons/Frame-3.svg" alt="deletar tarefa"></span>
+             <li id="tarefa">
+                <input type="checkbox"> <span>café preto</span> <span><img src="/assets/icons/Frame.svg" alt="deletar tarefa"></span>
             </li>
+            
         </ul>
     </main>
-    <footer>
-        <div id="alert" style="background-color: red;">
+    <footer class="container">
+        <div id="alert">
             <img src="/assets/icons/warning-circle-filled.svg" alt="">
             <span>O item foi removido da lista</span>
             <img src="/assets/icons/delete-small.svg">
