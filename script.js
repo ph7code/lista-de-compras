@@ -1,47 +1,35 @@
-const addTarefa = document.getElementById("nova-tarefa")
-const btnAddTarefa = document.getElementById("btn-adicionar")
-const deletarTarefa = document.getElementById("btn-deletar")
-const alert = document.getElementById("alert")
-const btnFechar = document.getElementById("btn-fechar")
+const nomeDaTarefa = document.getElementById("nova-tarefa")
+const buttonAddItem = document.getElementById("btn-adicionar")
+const lista = document.querySelector("ul")
 
-
-const listaDeCompras = document.getElementById("lista-de-compras")
-
-btnAddTarefa.addEventListener("click", (event) => {
+buttonAddItem.addEventListener("click", (event) => {
     event.preventDefault()
+    const input = document.createElement("input")
+    input.type = "checkbox"
+    const span = document.createElement("span")
+    span.textContent = (nomeDaTarefa).value
+    const botao = document.createElement("button")
+    botao.id = "btn-deletar"
+    const img = document.createElement("img")
+    img.src = "assets/icons/frame.svg"
     const li = document.createElement("li")
     li.id = "tarefa"
-    const checkbox = document.createElement("input")
-    checkbox.type = "checkbox"
-
-    const span = document.createElement("span")
-    span.textContent = addTarefa.value
-    const button = document.createElement("button")
-    button.id = "btn-deletar"
-    const img = document.createElement("img")
-    img.src = "/assets/icons/frame.svg"
-    
-    button.addEventListener("click", () => {
-        li.remove()
-
-        alert.style.display = "flex"
-        setTimeout(() => {
-            alert.style.display = "none"
-        },
-        3000)
-    })
-    button.append(img)
-    li.append(checkbox)
+    const alerta = document.getElementById("alert")
+    const fechar = document.getElementById("btn-fechar")
+    li.append(input)
     li.append(span)
-    li.append(button)
-    listaDeCompras.append(li)
+    li.append(botao)
+    botao.append(img)
+    lista.append(li)
 
-    addTarefa.value = ""
-
- console.log("escutado")
-})
-
-btnFechar.addEventListener("click", () => {
-    alert.style.display = "none"
+    botao.addEventListener("click", (event) => {
+        event.preventDefault()
+        li.remove()
+        alerta.style.display = "flex"
+        fechar.addEventListener("click", (event) => {
+            alerta.style.display = "none"
+        })
+        
+    })      
 })
 
